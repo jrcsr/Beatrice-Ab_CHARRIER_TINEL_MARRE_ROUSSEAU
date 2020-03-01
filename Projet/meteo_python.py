@@ -3,8 +3,6 @@ import requests, json
 from datetime import datetime
 import time
 
-with open('data.json') as json_file:
-    data = json.load(json_file)  
 # Enter your API key here
 base_url = "http://api.openweathermap.org/data/2.5/weather?"
 api_key = "37a707d1896cd81632b4f22e88bc0b7c"
@@ -13,6 +11,8 @@ city_name = input("Enter city name : ")
 complete_url = base_url + "appid=" + api_key + "&q=" + city_name
 
 while True:
+    with open('data.json') as json_file:
+		   data = json.load(json_file)  
     # Get the reponse
     response = requests.get(complete_url)
     x = response.json()
