@@ -88,7 +88,7 @@ app.run(debug=True)
 ## Montage éléctronique
 ![Montage](Projet/montage_elec.jpg)
 
-### Usages potentiels
+### Usage potentiel
 
 Ce montage, monté de façon ergonomique et facilement utilisable, peut être utilisé en tant que thermomètre intelligent, que l'on installerai chez soi.
 On pourrait consultrer les informations de temperature et d'humidité de sa maison (même plus si on y ajoute d'autres capteurs) depuis son smartphone, ainsi que les informations de météo classiques
