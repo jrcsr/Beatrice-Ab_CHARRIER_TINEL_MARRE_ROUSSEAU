@@ -22,24 +22,24 @@ Les informations sont récupéré et modifié pour pouvoir être publish sur les
 
 Si vous souhaitez exécuter le projet de votre coté, il vous faut:
 
-1 . Initialisez votre backend Sigfox
+* Initialisez votre backend Sigfox
 	-Téléverser le fichier sketch_jan20a.ino vers votre carte NodeMcu et lancez le programme
 	-Si votre montage est correctement effectué, vous devriez récupérer l'ID de votre BRKWS01
 	 ainsi que la température et le taux d'humidité
 	-Allez sur le site https://backend.sigfox.com/, recherchez votre capteur grâce à son ID
 	 Cliquez sur son ID, allez dans message et vous verrez la reception des messages
 
-2 . Lancer un serveur MQTT local sur votre PC
+* Lancer un serveur MQTT local sur votre PC
 	-Installez mosquitto sur votre PC
 	-Dans le bon dossier, lancez l'invité de commande en admin et tapez:
 		mosquitto.exe -c mosquitto.conf -v
 	
-3 . Lancer ngrok pour sécurisez votre votre tunnel vers votre localhost, et pouvoir récuperer 
+* Lancer ngrok pour sécurisez votre votre tunnel vers votre localhost, et pouvoir récuperer 
 	-Installez ngrok depuis ngrok.com
 	-Cliquez sur ngrok.exe et tapez : ngrok.exe http 5000 -region eu
 	-Récuperez le lien en face de "forwarding"
 
-4 . Initialisez votre backend
+* Initialisez votre backend
 	-Retourner sur Sigfox Backend, cliquez sur le "device type" de votre capteur
 	 allez dans callbacks, créez un custom callbacks, coller votre URL ngrok dans "URL pattern"
 	 utilisez la méthode POST, tapez : application/json dans "Content type" et dans "Body":
@@ -55,7 +55,7 @@ Si vous souhaitez exécuter le projet de votre coté, il vous faut:
 	}
 ```	
 
-5 . Installez Flask pour pouvoir récuperer les messages de votre capteur en json
+* Installez Flask pour pouvoir récuperer les messages de votre capteur en json
 	-Tapez : pip install Flask
 	-Créez un fichier python avec ce code :
 ```python
@@ -81,9 +81,14 @@ def data():
 app.run(debug=True)
 ```
 
-6 . Lancez le fichier python meteo_python.py
+* Lancez le fichier python meteo_python.py
 
-7 . Ouvrez index.html dans votre navigateur, et votre station météo est fonctionnelle !!
+* Ouvrez index.html dans votre navigateur, et votre station météo est fonctionnelle !!
 
-## MONT Montage éléctronique
-![MONT](Projet/montage_elec.jpg)
+## Montage éléctronique
+![Montage](Projet/montage_elec.jpg)
+
+### Usages potentiels
+
+Ce montage, monté de façon ergonomique et facilement utilisable, peut être utilisé en tant que thermomètre intelligent, que l'on installerai chez soi.
+On pourrait consultrer les informations de temperature et d'humidité de sa maison (même plus si on y ajoute d'autres capteurs) depuis son smartphone, ainsi que les informations de météo classiques
