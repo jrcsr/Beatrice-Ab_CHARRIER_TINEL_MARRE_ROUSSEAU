@@ -1,5 +1,7 @@
 # Projet d'IoT
 
+##Description et technologies utilisées
+
 Pour ce projet, nous avions pour objectif de récupérer les informations provenant de notre capteur DHT11 ainsi que les informations météorologiques de la ville dans laquelle nous étions
 Nous avons utilisés la technologies SigFox pour récupérer les informations du capteur, et la technologie MQTT pour 
 récupérer les informations depuis le site openweathermap.org.
@@ -15,6 +17,8 @@ qui lui même publie les bonnes informations sur chaque topic créés
 Ce même script python récupère les message du capteur à travers un fichier json générez par Flask.py,
 et qui s'update à chaque émission du capteur
 Les informations sont récupéré et modifié pour pouvoir être publish sur les bons topics et affichez sur le site
+
+##Exécuter le projet
 
 Si vous souhaitez exécuter le projet de votre coté, il vous faut:
 
@@ -80,3 +84,6 @@ app.run(debug=True)
 6 . Lancez le fichier python meteo_python.py
 
 7 . Ouvrez index.html dans votre navigateur, et votre station météo est fonctionnelle !!
+
+##MONT Montage éléctronique
+![MONT](Projet/montage_elec.jpg)
