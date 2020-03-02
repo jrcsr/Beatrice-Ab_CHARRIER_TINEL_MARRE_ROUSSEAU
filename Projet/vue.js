@@ -99,10 +99,10 @@ var app = new Vue({
         default:
         $(document).ready(function() {
                    var title = {
-                      text: 'Données météorologiques de Lille'
+                      text: 'Donnees meteorologiques de Lille'
                    };
                    var subtitle = {
-                      text: 'Résumé des 12 dernières mesures'
+                      text: 'Resume des 12 dernieres mesures'
                    };
                    var xAxis = {
                       categories: []
@@ -122,18 +122,18 @@ var app = new Vue({
                       borderWidth: 0
                    };
                    var series =  [{
-                     name: 'Température Extérieure (\xB0C)',
+                     name: 'Temperature Exterieure (\xB0C)',
                      data: app.tempOut},
                    {
-                      name: 'Température Intérieure (\xB0C)',
+                      name: 'Temperature Interieure (\xB0C)',
                       data: app.tempIn
                    },
                    {
-                      name: 'Humidité Intérieure (%)',
+                      name: 'Humidite Interieure (%)',
                       data: app.humIn
                    },
                    {
-                      name: 'Humidité Extérieure (%)',
+                      name: 'Humidite Exterieure (%)',
                       data: app.humOut
                    },
                    {
